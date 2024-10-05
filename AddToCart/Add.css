@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+#logo img {
+    height: 50px; /* Adjust as necessary */
+    border-radius: 30px 30px 30px 30px;
+}
+
+/* Styles for the navigation list */
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0; /* Align list to the left */
+}
+
+/* Individual items within the navbar */
+#navbar .home,
+#navbar .about,
+#navbar .Food,
+#navbar .con,
+#navbar .car {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Spacing between items */
+    
+}
+
+
+#navbar .item a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+#navbar .item a:hover {
+    color: #FFD700; /* Gold color on hover */
+    background-color: white;
+    border-radius: 25px; 
+
+}
+
+#navbar ul {
+    margin-left: auto;
+}
+
+
+/* Icon styling */
+.material-symbols-outlined {
+    margin-right: 1px; /* Space between icon and text */
+    font-size: 20px; /* Size of the icon */
+    color: white; /* Icon color */
+}
+
+
+
+/* Additional styling for all items to align left */
+#navbar > div,
+#navbar ul > div {
+    display: flex; /* Ensure all items use flex layout */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margins */
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 200px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style the home section */
+
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('/images/bt1.jpg') no-repeat center center/cover;
+    height: 702px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    /* color:white; */
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    /* color:white; */
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+
+.menu-section {
+    padding: 40px 0;
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-categories {
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    background: linear-gradient(135deg, #ff4081, #f50057);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background: linear-gradient(135deg, #d81b60, #c2185b);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.food-item {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+    width: 300px; /* Increased width for larger items */
+    height: 420px; /* Increased height for more content */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content */
+}
+
+.food-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.food-item img {
+    width: 100%;
+    height: 200px; /* Set fixed height for images */
+    object-fit: cover; /* Ensure image covers the entire box */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-item:hover img {
+    transform: scale(1.1);
+}
+
+.food-item h3 {
+    color: #333;
+    margin: 15px;
+    font-size: 22px; /* Slightly larger font size */
+    font-weight: 600;
+}
+
+.food-item p {
+    color: #555;
+    margin: 0 15px 15px; /* Reduced margin for better spacing */
+    font-size: 14px;
+    flex-grow: 1; /* Allow description to take more space */
+}
+
+.food-item .price {
+    color: #ff4081;
+    font-weight: bold;
+    margin: 10px 15px;
+    font-size: 18px; /* Slightly larger font size */
+}
+
+.add-to-cart-btn {
+    background: linear-gradient(135deg, #2196f3, #1e88e5); /* Blue gradient background */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(135deg, #1976d2, #1565c0); /* Darker gradient on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Larger shadow */
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Footer Styles */
+footer, footer * {
+    margin: 0;
+    padding: 0;
+    background-color:#ccc;
+}
+
+/* Main Footer Styling */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    padding: 0; /* Remove any padding from the footer itself */
+}
+
+/* Column Styling */
+footer .col {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Text Styling */
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+/* Hover Effects */
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Copyright Section Styling */
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    margin-top: 0; /* Remove any top margin */
+    margin-top: 20px;
+}
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
